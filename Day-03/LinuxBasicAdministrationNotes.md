@@ -50,6 +50,10 @@
     ```bash
     grep -i "error" /var/log/syslog
     ```
+    **grep -c:** Find numerical number is the word "ERROR" in a log file:
+    ```bash
+    grep -c "error" /var/log/syslog
+    ```
 2.  **Find:** Locate all `.log` files in the `/var/log` directory:
     ```bash
     find /var/log -name "*.log"
@@ -86,7 +90,7 @@
 
 ### Key Commands: `ip`, `netstat`, `curl`, `nslookup`
 1.  **IP Address:** Use `ip addr show` to find your local IP.
-2.  **Port Checking:** Check if a port (e.g., 80 or 443) is listening: `netstat -tuln`.
+2.  **Port Checking:** Check if a port (e.g., 80 or 443) is listening: `netstat -tuln`. (Active Internet connections data)
 3.  **Connectivity:** Use `curl -I http://google.com` to check headers of a website.
 4.  **DNS Lookups:** Use `nslookup` or `dig` to find the IP of a domain name.
 
