@@ -55,6 +55,7 @@ chown user:group file.txt  # Change file ownership and group
 
 ```bash
 grep -i "error" app.log    # Case-insensitive search for string "error"
+grep -n "error" app.log    # search for "error" and disply the lines numbers aswell
 grep -r "API_KEY" ./src    # Recursively search for string across directory files
 find /var/log -name "*.log"# Find files by name pattern
 awk '{print $1, $4}' log   # Extract specific columns (1st and 4th) from formatted text
@@ -82,6 +83,9 @@ htop                       # Interactive, colorized process viewer (if installed
 ## ⚙️ 6. Process Management
 
 ```bash
+echo $$                   # Display PID of the current shell or user
+ps -au                     # Displays processes associated with users, using BSD-style options.
+ps -ef                     # Displays all running processes along with their PIDs.
 ps aux                     # List all running processes on the system
 ps aux | grep nginx        # Filter running processes for "nginx"
 pgrep node                 # Output process ID (PID) of running service
